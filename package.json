@@ -1,0 +1,20 @@
+{
+  "name": "giraud_stephane_3_19022021",
+  "version": "1.0.0",
+  "description": "projet3",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:.css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stephanegiraud/P3_ohmyfood"
+  },
+  "author": "stephane giraud",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stephanegiraud/P3_ohmyfood/issues"
+  },
+  "homepage": "https://github.com/stephanegiraud/P3_ohmyfood#readme"
+}
+

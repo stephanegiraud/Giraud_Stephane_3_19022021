@@ -1,0 +1,78 @@
+/* research */ 
+.research{
+    width: 100%;
+    background: #f2f2f2;
+    padding-bottom: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    }
+.localisation{
+  width: 100%;
+  background-color: #e5e5e5;
+  padding-top: 2%;
+  padding-bottom: 2%;
+    input{
+  background-color:#e5e5e5;
+  border: none;
+      &::placeholder {
+  text-align: center;
+  color: black;
+    }
+  }
+}
+.description{
+  h2{
+  padding-right: 50px;
+  padding-left: 50px;
+}
+  p{
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+/* notice */ 
+.notice{
+  width: 90%;
+  position: relative;
+.notice__list {
+  padding: 0;
+  counter-reset: compteListe;
+  li {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 2rem;  
+    i{
+      padding-right: 5%;
+    }
+    &::before {
+      counter-increment: compteListe;
+      content: counter(compteListe) " ";
+      background-color: $color-primary;
+      border-radius: 50%;
+      padding: 0.2rem 0.5rem;
+      color: white;
+      position: absolute;
+      left: 2px;
+    }
+  }
+}
+}  
+/* restaurants */
+.restaurants{
+    position: relative;
+    width: 100%;
+    padding-top: 100px;
+    padding-bottom: 40px;
+    background: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    h2 {
+      position: absolute;
+      left: 5%;
+      top: 2%;
+    }
+}

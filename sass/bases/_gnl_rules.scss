@@ -1,0 +1,18 @@
+
+*:focus { outline:none }
+
+a{
+  text-decoration: none;
+  color: black;
+}
+h1{
+  font-family: "shrikhand";
+}
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body{
+  font-family: "roboto";
+} 

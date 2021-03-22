@@ -1,0 +1,35 @@
+button{cursor: pointer;}
+
+.main_button {
+        min-width: 30%;
+        color: white;
+        border: none;
+        padding: 1rem 3rem;
+        border-radius: 5rem;
+        margin-top: 5%;
+        @include background ($color-secondary,$color-primary);        
+        @include shadow ($color-shadow);      
+            &:hover {
+                @include shadow(darken($color-shadow, 20%));        
+                @include background(lighten($color-secondary, 5%), lighten($color-primary, 5%))
+            }
+        }
+
+.secondary_button{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    border: none;
+    height: 4rem;
+    border-radius: 1rem;
+    color: black;
+    @include shadow ($color-shadow);      
+        &:hover {
+            background:lighten($color-primary,35%);
+                & i{
+                    color:$color-primary;
+                    }
+                }  
+    }

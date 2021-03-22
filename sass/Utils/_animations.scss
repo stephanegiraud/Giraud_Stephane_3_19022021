@@ -1,0 +1,136 @@
+/* anim loader */
+@keyframes key-back1 {
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+} 
+.loader{
+  z-index: 1;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top:0;
+  background-color: white;
+  animation-name: key-back1;
+  animation-duration: 0.2s;
+  animation-delay: 3.5s;
+  animation-fill-mode: forwards;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+/* anim progress */
+@keyframes progress-bar{
+  0% {
+      transform: scaleX(0);
+  }
+  17% {
+      transform: scaleX(.18);
+  }
+  24% {
+      transform: scaleX(.4);
+  }
+  46% {
+      transform: scaleX(.81);
+      opacity: 0.7;
+  }
+  100% {
+      transform: scaleX(1);
+      opacity: 1;
+  }
+}
+$prog-bar-dur: 2.75s;
+$prog-bar-delay: 0.5s;
+
+  .progress {
+    width: 50%;
+    height: 1em;
+    border-radius: 0.6em;
+    border: 2px solid $color-primary;
+    &__bar {
+        transform: scaleX(0); 
+        font-size: 1em;
+        @include background ($color-secondary,$color-primary);        
+        height: 1em;
+        border-radius: 0.5em;
+        animation: progress-bar $prog-bar-dur $prog-bar-delay;
+        transform-origin: left;
+        animation-fill-mode: forwards; 
+    }
+}  
+
+/* anim heart */
+.heart{
+    cursor: pointer;
+    position: relative;
+    .heart1{
+      position: absolute;
+      font-size: 1.5em;
+    }
+    .heart2{
+    font-size: 1.5em;
+    transform: scale(0);
+    background: linear-gradient(#9356dc, #ff79da);
+    -webkit-background-clip: text;
+    color: transparent;
+    }
+  &:hover{
+    .heart2{
+    transform: scale(1);
+    transition: transform 0.5s ease-in-out;
+  }
+  }
+  }
+
+/* anim menu */
+@keyframes fromthetop{
+  0% {
+     opacity: 0;
+     transform: translateY(-20px);
+  }
+  100% {
+     opacity: 1;
+     transform: translateY(0);
+  }
+}
+.choice{
+  cursor: pointer;
+  background-color: white;
+  border-radius: 15px 15px 15px 15px ;
+  display: flex;
+  margin:15px auto;
+  animation: fromthetop 1s ease-in both;
+      &:nth-child(3){
+          animation-delay: 0.5s;
+      }
+      &:nth-child(4){
+          animation-delay: 1s;
+      }
+  }  
+/* anim checkbox */
+.checkbox{
+  overflow: hidden; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  color: white;
+  background: #99e2d0; 
+  border-radius: 0 15px 15px 0 ;
+  width: 0;
+  transition: width 1s ease-in-out;               
+  &>i{
+      transform: rotate(2turn);
+  }
+}  
+.choice:hover{
+  .checkbox {
+      width: 35%;
+      &>i{
+          transform: rotate(0);
+          transition-duration: 1s;
+      }
+  }
+}

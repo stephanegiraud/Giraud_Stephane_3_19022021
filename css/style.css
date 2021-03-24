@@ -124,7 +124,7 @@ header {
   }
   100% {
     opacity: 1;
-    transform: translateY(-20px);
+    transform: translateY(-10px);
   }
 }
 /* anim checkbox */
